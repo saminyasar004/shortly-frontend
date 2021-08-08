@@ -1,0 +1,105 @@
+@import "./variables";
+
+.statistics-section {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0 10rem 0;
+    background: $section_bg_color;
+
+    .row.statistics-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+
+        h2 {
+            font: {
+                size: 3.5rem;
+                weight: 700;
+            }
+            color: $dark_blue;
+            text-transform: capitalize;
+        }
+
+        p {
+            width: 45%;
+            margin: auto;
+            color: $grayish_violet;
+            text-transform: capitalize;
+        }
+    }
+
+    .row.statistics-card-container {
+        display: grid;
+        grid-template: 1fr / repeat(3, 1fr);
+        align-items: center;
+        grid-gap: 4rem;
+
+        .statistics-card {
+            padding: 6rem 4rem 4rem 4rem;
+            border-radius: 0.8rem;
+            background: #ffffff;
+            box-shadow: 0 0.1rem 2rem 0 #35323e4a;
+            position: relative;
+
+            &:nth-child(1):after,
+            &:nth-child(2):after {
+                content: "";
+                width: 4rem;
+                height: 0.5rem;
+                background: $cyan_color;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateX(100%);
+            }
+
+            &:nth-child(2) {
+                margin-top: 8rem;
+            }
+
+            &:nth-child(3) {
+                margin-top: 15rem;
+            }
+
+            .card-image {
+                width: 8rem;
+                height: 8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $violet_color;
+                border-radius: 50%;
+                position: absolute;
+                top: -15%;
+
+                img {
+                    max-width: 50%;
+                }
+            }
+
+            .card-text {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: 1rem;
+
+                h3 {
+                    color: $violet_color;
+                    text-transform: capitalize;
+                }
+
+                p {
+                    font: {
+                        size: 1.3rem;
+                    }
+                    color: $grayish_violet;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}

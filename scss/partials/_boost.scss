@@ -1,0 +1,30 @@
+@import "./variables";
+
+.boost-section {
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    background-color: $violet_color;
+    background-image: url("../img/bg-boost-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 0;
+        text-align: center;
+
+        h2 {
+            font: {
+                size: 3rem;
+            }
+            color: $font_color;
+            text-transform: capitalize;
+        }
+    }
+}

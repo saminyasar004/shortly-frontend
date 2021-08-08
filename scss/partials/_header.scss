@@ -1,0 +1,46 @@
+@import "./variables";
+
+.header-section {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+
+    .row {
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+        align-items: center;
+
+        .header-text {
+            h1 {
+                font: {
+                    size: 5rem;
+                    weight: 700;
+                }
+                text-transform: capitalize;
+                line-height: 1.2;
+                color: $dark_blue;
+            }
+
+            p {
+                width: 80%;
+                font: {
+                    size: 1.6rem;
+                }
+                line-height: 1.7;
+                color: $grayish_violet;
+                padding-bottom: 2.5rem;
+                text-transform: capitalize;
+            }
+        }
+
+        .header-image {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

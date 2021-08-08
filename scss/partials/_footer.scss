@@ -1,0 +1,118 @@
+@import "./variables";
+
+.footer-section {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+    background: $dark_violet;
+
+    .row:first-child {
+        padding: 4rem 0;
+        display: grid;
+        grid-template: 1fr / 1fr 2fr 1fr;
+
+        .footer-logo {
+            a {
+                img {
+                    max-width: 100%;
+                    filter: brightness(100);
+                }
+            }
+        }
+
+        .footer-nav {
+            display: grid;
+            grid-template: 1fr / repeat(3, 1fr);
+
+            .footer-nav-item {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: 2rem;
+
+                h4 {
+                    color: $font_color;
+                    text-transform: capitalize;
+                }
+
+                ul {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    list-style: none;
+
+                    li {
+                        a {
+                            font: {
+                                size: 1.3rem;
+                            }
+                            color: $grayish_violet;
+                            text-decoration: none;
+                            text-transform: capitalize;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                color: $cyan_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-social {
+            ul {
+                width: 45%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-around;
+                list-style: none;
+
+                li {
+                    a {
+                        color: $font_color;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: $cyan_color;
+                        }
+
+                        i {
+                            font: {
+                                size: 1.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .row:last-child {
+        padding-top: 3rem;
+
+        .author-text {
+            font: {
+                size: 1.3rem;
+            }
+            color: $font_color;
+            text-align: center;
+            text-transform: capitalize;
+
+            a {
+                color: $cyan_color;
+                transition: all 0.3s;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

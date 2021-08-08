@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shortly | Link Shortener</title>
+        <!-- linking favicon icon -->
+        <link
+            rel="shortcut icon"
+            href="./images/favicon-32x32.png"
+            type="image/x-icon"
+        />
+        <!-- linking google font: Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- linking stylesheet -->
+        <link rel="stylesheet" href="./css/style.min.css" />
+        <link rel="stylesheet" href="./css/responsive.min.css" />
+        <link rel="stylesheet" href="./icon/css/all.min.css" />
+        <!-- linking javascript -->
+        <script src="./js/script.js" defer></script>
+    </head>
+    <body>
+        <!-- navigation section start -->
+        <nav class="navigation-section">
+            <div class="row desktop-navigation">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="Shortly" />
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">features</a></li>
+                        <li><a href="#">pricing</a></li>
+                        <li><a href="#">resources</a></li>
+                    </ul>
+                </div>
+                <div class="nav-account">
+                    <button class="btn-transparent">login</button>
+                    <button class="btn-primary-rounded">sign up</button>
+                </div>
+            </div>
+
+            <div class="row mobile-navigation">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="Shortly" />
+                    </a>
+                </div>
+                <div class="hamburger-container">
+                    <i id="hamburgerIcon" class="fa fa-bars"></i>
+                </div>
+                <div id="navLinks" class="nav-links">
+                    <ul>
+                        <li><a href="#">features</a></li>
+                        <li><a href="#">pricing</a></li>
+                        <li><a href="#">resources</a></li>
+                    </ul>
+                    <div class="nav-account">
+                        <button class="btn-transparent">login</button>
+                        <button class="btn-primary-rounded">sign up</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navigation section end -->
+
+        <!-- header section start -->
+        <header class="header-section">
+            <div class="row">
+                <div class="header-text">
+                    <h1>more than just shorter links</h1>
+                    <p>
+                        build your brand's recognition and get detailed insights
+                        on how your links are performing.
+                    </p>
+                    <button class="btn-primary-rounded">get started</button>
+                </div>
+                <div class="header-image">
+                    <img src="./img/illustration-working.svg" />
+                </div>
+            </div>
+        </header>
+        <!-- header section end -->
+
+        <!-- shortener section start -->
+
+        <section class="shortener-section">
+            <div class="row">
+                <div class="shortener-form-container">
+                    <form id="shortenForm">
+                        <div class="form-group">
+                            <input
+                                id="inputedLink"
+                                type="text"
+                                placeholder="Shorten a link here..."
+                            />
+                            <input
+                                id="btnShorten"
+                                class="btn-primary"
+                                type="submit"
+                                value="shorten it"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <p class="error">please add a link</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="shorted-links-container">
+                    <div class="shorting-loader">
+                        <div class="loader-container">
+                            <div class="round1"></div>
+                            <div class="round2"></div>
+                            <div class="round3"></div>
+                        </div>
+                    </div>
+                    <div class="shorted-link-container">
+                        <div class="actual-link">
+                            <p>https://saminyasar.netlify.app/</p>
+                        </div>
+                        <div class="shorted-link">
+                            <a href="https:/fsdaf.com" target="_blank"
+                                >https://fsadfa.com</a
+                            >
+                            <button class="btn-primary">copy</button>
+                        </div>
+                    </div>
+
+                    <div class="shorted-link-container">
+                        <div class="actual-link">
+                            <p>https://saminyasar.netlify.app/</p>
+                        </div>
+                        <div class="shorted-link">
+                            <a href="https:/fsdaf.com" target="_blank"
+                                >https://fsadfa.com</a
+                            >
+                            <button class="btn-primary btn-copied">
+                                copied!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- shortener section end -->
+
+        <!-- statistics section start -->
+
+        <section class="statistics-section">
+            <div class="row statistics-header">
+                <h2>advanced statistics</h2>
+                <p>
+                    track how your links are performing accross the web with our
+                    advanced statistics dashboard.
+                </p>
+            </div>
+            <div class="row statistics-card-container">
+                <div class="statistics-card">
+                    <div class="card-image">
+                        <img src="./img/icon-brand-recognition.svg" />
+                    </div>
+                    <div class="card-text">
+                        <h3>brand recognition</h3>
+                        <p>
+                            boost your brand recognition with each click.
+                            generic links don't mean a thing. branded links help
+                            instil confidence in your content.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="statistics-card">
+                    <div class="card-image">
+                        <img src="./img/icon-detailed-records.svg" />
+                    </div>
+                    <div class="card-text">
+                        <h3>detailed records</h3>
+                        <p>
+                            gain insights into who is clicking your links.
+                            knowing when and where people engage with your
+                            content helps inform better decisions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="statistics-card">
+                    <div class="card-image">
+                        <img src="./img/icon-fully-customizable.svg" />
+                    </div>
+                    <div class="card-text">
+                        <h3>fully customizable</h3>
+                        <p>
+                            improve brand awareness and content discoverability
+                            through customizable links, supercharging audience
+                            engagement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- statistics section end -->
+
+        <!-- boost section start -->
+
+        <div class="boost-section">
+            <div class="row">
+                <h2>boost your links today</h2>
+                <button class="btn-primary-rounded">get started</button>
+            </div>
+        </div>
+
+        <!-- boost section end -->
+
+        <!-- footer section start -->
+
+        <footer class="footer-section">
+            <div class="row">
+                <div class="footer-logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="Shortly" />
+                    </a>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-item">
+                        <h4>features</h4>
+                        <ul>
+                            <li><a href="#">link shortening</a></li>
+                            <li><a href="#">baranded links</a></li>
+                            <li><a href="#">analytics</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h4>resources</h4>
+                        <ul>
+                            <li><a href="#">blog</a></li>
+                            <li><a href="#">developers</a></li>
+                            <li><a href="#">support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-item">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">our team</a></li>
+                            <li><a href="#">careers</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <ul>
+                        <li>
+                            <a href="#"
+                                ><i class="fab fa-facebook-square"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p class="author-text">
+                    build with 💜 by
+                    <a target="_blank" href="https://saminyasar.netlify.app/"
+                        >samin yasar</a
+                    >
+                </p>
+            </div>
+        </footer>
+
+        <!-- footer section end -->
+    </body>
+</html>

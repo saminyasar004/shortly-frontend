@@ -1,0 +1,36 @@
+// colors
+$font_color: #ffffff;
+$cyan_color: hsl(180, 66%, 49%);
+$violet_color: hsl(257, 27%, 26%);
+$red_color: hsl(0, 87%, 67%);
+$grey_color: hsl(0, 0%, 75%);
+$grayish_violet: hsl(257, 7%, 63%);
+$dark_blue: hsl(255, 11%, 22%);
+$dark_violet: hsl(260, 8%, 14%);
+$section_bg_color: #eff1f7;
+
+// typography
+$font_family: "Poppins", sans-serif;
+
+// media queries
+$xsmall: (
+    "min": 320px,
+    "max": 480px,
+);
+$small: (
+    "min": 481px,
+    "max": 768px,
+);
+$medium: (
+    "min": 769px,
+    "max": 1024px,
+);
+$large: (
+    "min": 1025px,
+    "max": 1200px,
+);
+$xlarge: (
+    "min": 1201px,
+    "max": 1400px,
+);
+$row-width-gap: 5rem;

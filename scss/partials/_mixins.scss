@@ -1,0 +1,50 @@
+@import "./variables";
+
+.btn {
+    padding: 1rem 2.5rem;
+    text-transform: capitalize;
+    font: {
+        size: 1.5rem;
+        weight: 600;
+    }
+    border: 0.3rem solid transparent;
+    border-radius: 0.6rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    @extend .btn;
+    color: $font_color;
+    background: $cyan_color;
+
+    &:hover {
+        background: hsl(180, 66%, 60%);
+    }
+}
+
+.btn-primary-rounded {
+    @extend .btn;
+    @extend .btn-primary;
+    border-radius: 5rem;
+}
+
+.btn-secondary {
+    @extend .btn;
+    color: $font_color;
+    background: $violet_color;
+}
+
+.btn-transparent {
+    @extend .btn;
+    color: $grayish_violet;
+    background: transparent;
+}
+
+// media queries
+@mixin media-query($size) {
+  @media screen and (min-width: map-get($size, $key: "min")) and (max-width: map-get($size, $key: "max")) {
+    @content;
+  }
+}
