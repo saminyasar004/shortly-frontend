@@ -5,6 +5,9 @@
  * Date: 08/August/2021
  */
 
+// ? Dependencies
+import Shortener from "./Shortener.js";
+
 // ? Navigation Animation
 
 const hamburgerIcon = document.getElementById("hamburgerIcon");
@@ -30,17 +33,33 @@ const shortenForm = document.getElementById("shortenForm");
 const inputedLink = document.getElementById("inputedLink");
 const btnShorten = document.getElementById("btnShorten");
 const errorContainer = document.querySelector(".form-group:last-child");
+const shortedLinksContainer = document.getElementById("shortedLinksContainer");
+const shortingLoader = document.getElementById("shortingLoader");
 
-shortenForm.addEventListener("submit", (e) => {
+shortenForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const inputedLinkValue = inputedLink.value.trim();
     if (inputedLinkValue !== "") {
-        // validate input link
         inputedLink.style.borderColor = "";
         errorContainer.style.display = "";
-        console.log(inputedLinkValue);
         inputedLink.value = "";
-        // TODO: shorten the given link using Short.co API
+        shortingLoader.style.display = "block";
+
+        const shortener = new Shortener(inputedLinkValue);
+        const shortedLinkObj = await shortener.getData();
+        shortener.manipulateDOM(shortedLinksContainer);
+        [...document.querySelectorAll(".btn-copy")].forEach((btnCopy) => {
+            if (btnCopy.classList.contains("btn-secondary")) {
+                console.log("Find.");
+            }
+            btnCopy.addEventListener("click", () => {
+                btnCopy.classList.remove("btn-primary");
+                btnCopy.classList.add("btn-secondary");
+                btnCopy.textContent = "copied!";
+            });
+        });
+
+        shortingLoader.style.display = "";
     } else {
         inputedLink.style.borderColor = "hsl(0, 87%, 67%)";
         errorContainer.style.display = "block";

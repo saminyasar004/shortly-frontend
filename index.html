@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="./css/responsive.min.css" />
         <link rel="stylesheet" href="./icon/css/all.min.css" />
         <!-- linking javascript -->
-        <script src="./js/script.js" defer></script>
+        <script src="./js/script.js" type="module" defer></script>
     </head>
     <body>
         <!-- navigation section start -->
@@ -113,15 +113,15 @@
                         </div>
                     </form>
                 </div>
-                <div class="shorted-links-container">
-                    <div class="shorting-loader">
+                <div id="shortedLinksContainer" class="shorted-links-container">
+                    <div id="shortingLoader" class="shorting-loader">
                         <div class="loader-container">
                             <div class="round1"></div>
                             <div class="round2"></div>
                             <div class="round3"></div>
                         </div>
                     </div>
-                    <div class="shorted-link-container">
+                    <!-- <div class="shorted-link-container" style="display: none">
                         <div class="actual-link">
                             <p>https://saminyasar.netlify.app/</p>
                         </div>
@@ -129,11 +129,11 @@
                             <a href="https:/fsdaf.com" target="_blank"
                                 >https://fsadfa.com</a
                             >
-                            <button class="btn-primary">copy</button>
+                            <button class="btn-primary btn-copy">copy</button>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="shorted-link-container">
+                    <!-- <div class="shorted-link-container">
                         <div class="actual-link">
                             <p>https://saminyasar.netlify.app/</p>
                         </div>
@@ -145,7 +145,7 @@
                                 copied!
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>

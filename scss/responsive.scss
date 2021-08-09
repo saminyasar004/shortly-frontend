@@ -46,6 +46,7 @@
 
             .header-image {
                 grid-row: 1 / 2;
+                overflow: hidden;
 
                 img {
                     transform: translateX(15%);
@@ -70,7 +71,7 @@
                         flex-direction: column;
                         gap: 2rem;
 
-                        .btn-primary {
+                        input[type="submit"] {
                             width: 100%;
                         }
                     }
@@ -94,7 +95,7 @@
                         flex-direction: column;
                         gap: 1.5rem;
 
-                        .btn-primary {
+                        button {
                             width: 100%;
                         }
                     }
@@ -254,6 +255,7 @@
 
             .header-image {
                 grid-row: 1 / 2;
+                overflow: hidden;
 
                 img {
                     transform: translateX(15%);
@@ -281,7 +283,7 @@
                         flex-direction: column;
                         gap: 1.5rem;
 
-                        .btn-primary {
+                        button {
                             width: 100%;
                         }
                     }
