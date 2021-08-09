@@ -59,17 +59,3 @@ export default class Shortener {
         parentEl.appendChild(shortedLinkContainer);
     }
 }
-
-/* 
-<div class="shorted-link-container">
-    <div class="actual-link">
-        <p>https://saminyasar.netlify.app/</p>
-    </div>
-    <div class="shorted-link">
-        <a href="https:/fsdaf.com" target="_blank"
-            >https://fsadfa.com</a
-        >
-        <button class="btn-primary">copy</button>
-    </div>
-</div>
- */

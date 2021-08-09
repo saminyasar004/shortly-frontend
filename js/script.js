@@ -46,16 +46,29 @@ shortenForm.addEventListener("submit", async (e) => {
         shortingLoader.style.display = "block";
 
         const shortener = new Shortener(inputedLinkValue);
-        const shortedLinkObj = await shortener.getData();
+        await shortener.getData();
         shortener.manipulateDOM(shortedLinksContainer);
         [...document.querySelectorAll(".btn-copy")].forEach((btnCopy) => {
-            if (btnCopy.classList.contains("btn-secondary")) {
-                console.log("Find.");
-            }
             btnCopy.addEventListener("click", () => {
+                [...document.querySelectorAll(".btn-copy")]
+                    .filter((el) => el.classList.contains("btn-secondary"))
+                    .forEach((el) => {
+                        el.classList.remove("btn-secondary");
+                        el.classList.add("btn-primary");
+                        el.textContent = "copy";
+                    });
                 btnCopy.classList.remove("btn-primary");
                 btnCopy.classList.add("btn-secondary");
                 btnCopy.textContent = "copied!";
+                const copyURL = btnCopy.previousElementSibling.href;
+                const copyEl = document.createElement("input");
+                copyEl.type = "text";
+                copyEl.readOnly = true;
+                copyEl.value = copyURL;
+                document.body.appendChild(copyEl);
+                copyEl.select();
+                document.execCommand("copy");
+                document.body.removeChild(copyEl);
             });
         });
 
