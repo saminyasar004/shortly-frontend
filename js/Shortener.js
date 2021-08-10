@@ -49,10 +49,16 @@ export default class Shortener {
         shortedLinkContainer.classList.add("shorted-link-container");
         shortedLinkContainer.innerHTML = `
             <div class="actual-link">
-                <p>${this.responseObj.original_link.substr(0, 25)}</p>
+                <p>${
+                    this.responseObj.original_link.length > 25
+                        ? this.responseObj.original_link.substr(0, 25) + "..."
+                        : this.responseObj.original_link.substr(0, 25)
+                }</p>
             </div>
             <div class="shorted-link">
-                <a href="${this.responseObj.full_short_link}" target="_blank">${this.responseObj.full_short_link}</a>
+                <a href="${this.responseObj.full_short_link}" target="_blank">${
+            this.responseObj.full_short_link
+        }</a>
                 <button class="btn-primary btn-copy">copy</button>
             </div>
         `;
