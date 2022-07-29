@@ -23,4 +23,6 @@
 
 [Shortly](https://shortlyy.vercel.app/ "Shortly Live Preview")
 
+[The API part of this project](https://github.com/saminyasar004/shortly-api "Shortly API")
+
 ### Happy Coding 🚀

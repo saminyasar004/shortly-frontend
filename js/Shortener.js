@@ -16,7 +16,7 @@ export default class Shortener {
         this.inputedURL = inputedURL;
         this.responseObj = null;
 
-        this.apiURL = `https://api.shrtco.de/v2/shorten?url=${this.inputedURL}`;
+        this.apiURL = `https://shortly-samin.herokuapp.com/shorten?url=${this.inputedURL}`;
     }
 
     async getData() {
@@ -50,14 +50,16 @@ export default class Shortener {
         shortedLinkContainer.innerHTML = `
             <div class="actual-link">
                 <p>${
-                    this.responseObj.original_link.length > 25
-                        ? this.responseObj.original_link.substr(0, 25) + "..."
-                        : this.responseObj.original_link.substr(0, 25)
+                    this.responseObj.originalLink.length > 25
+                        ? this.responseObj.originalLink.substr(0, 25) + "..."
+                        : this.responseObj.originalLink.substr(0, 25)
                 }</p>
             </div>
             <div class="shorted-link">
-                <a href="${this.responseObj.full_short_link}" target="_blank">${
-            this.responseObj.full_short_link
+                <a href="${this.responseObj.shortenLink}" target="_blank">${
+            this.responseObj.shortenLink.length > 25
+                ? this.responseObj.shortenLink.substr(0, 25) + "..."
+                : this.responseObj.shortenLink.substr(0, 25)
         }</a>
                 <button class="btn-primary btn-copy">copy</button>
             </div>
